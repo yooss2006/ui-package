@@ -1,4 +1,3 @@
-import { useState } from "react";
 import cx from "./cx";
 import data from "./data";
 
