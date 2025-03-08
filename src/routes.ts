@@ -3,6 +3,7 @@ import Accordions from "./components/accordion";
 import TabMenus from "./components/tabMenu";
 import ToolTips from "./components/tooltip";
 import LineClamps from "@/components/lineClamp";
+import LazyLoad1 from "./components/lazyLoading/1_r";
 
 export const routePaths = [
   "/",
@@ -12,6 +13,7 @@ export const routePaths = [
   "/textBox",
   "/lineClamp",
   "/lazyLoading",
+  "/lazyLoading/1_r",
   "/infiniteScroll",
   "/scrollBox",
   "/scrollSpy",
@@ -98,9 +100,15 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
   },
   "/lazyLoading": {
     key: "/lazyLoading",
-    link: "/lazyLoading",
+    link: "/lazyLoading/1_r",
     name: "06. 지연 로딩",
-    children: null,
+    children: ["/lazyLoading/1_r"],
+  },
+  "/lazyLoading/1_r": {
+    key: "/lazyLoading/1_r",
+    link: "/lazyLoading/1_r",
+    name: "#1 React",
+    children: LazyLoad1,
   },
   "/infiniteScroll": {
     key: "/infiniteScroll",
