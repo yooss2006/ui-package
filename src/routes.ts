@@ -6,6 +6,7 @@ import LineClamps from "@/components/lineClamp";
 import LazyLoad1 from "./components/lazyLoading/1_r";
 import LazyLoad1_V from "./components/lazyLoading/2_v";
 import InfiniteScrollR from "./components/infiniteScroll/react";
+import InfiniteScrollV from "./components/infiniteScroll/vanilla";
 
 export const routePaths = [
   "/",
@@ -19,6 +20,7 @@ export const routePaths = [
   "/lazyLoading/1_v",
   "/infiniteScroll",
   "/infiniteScroll/react",
+  "/infiniteScroll/js",
   "/scrollBox",
   "/scrollSpy",
   "/snackbar",
@@ -58,8 +60,6 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
       "/textBox",
       "/lineClamp",
       "/lazyLoading",
-      "/lazyLoading/1_r",
-      "/lazyLoading/1_v",
       "/infiniteScroll",
       "/scrollBox",
       "/scrollSpy",
@@ -126,13 +126,19 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     key: "/infiniteScroll",
     link: "/infiniteScroll/react",
     name: "07. 무한 스크롤",
-    children: ["/infiniteScroll/react"],
+    children: ["/infiniteScroll/react", "/infiniteScroll/js"],
   },
   "/infiniteScroll/react": {
     key: "/infiniteScroll/react",
     link: "/infiniteScroll/react",
     name: "무한스크롤 리액트",
     children: InfiniteScrollR,
+  },
+  "/infiniteScroll/js": {
+    key: "/infiniteScroll/js",
+    link: "/infiniteScroll/js",
+    name: "무한스크롤 바닐라",
+    children: InfiniteScrollV,
   },
   "/scrollBox": {
     key: "/scrollBox",
