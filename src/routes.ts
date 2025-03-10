@@ -10,6 +10,8 @@ import InfiniteScrollV from "./components/infiniteScroll/vanilla";
 import ScrollBox from "./components/scrollBox";
 import ScrollSpy1 from "@/components/scrollSpy/1_r";
 import ScrollSpy2 from "@/components/scrollSpy/2_r";
+import ScrollSpy3V from "@/components/scrollSpy/3_v";
+import ScrollSpy4 from "@/components/scrollSpy/4_r";
 
 export const routePaths = [
   "/",
@@ -28,6 +30,8 @@ export const routePaths = [
   "/scrollSpy",
   "/scrollSpy/1_r",
   "/scrollSpy/2_r",
+  "/scrollSpy/3_v",
+  "/scrollSpy/4_r",
 ] as const;
 export type ROUTE_PATH = (typeof routePaths)[number];
 
@@ -137,7 +141,12 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     key: "/scrollSpy",
     link: "/scrollSpy/1_r",
     name: "스크롤 스파이",
-    children: ["/scrollSpy/1_r", "/scrollSpy/2_r"],
+    children: [
+      "/scrollSpy/1_r",
+      "/scrollSpy/2_r",
+      "/scrollSpy/3_v",
+      "/scrollSpy/4_r",
+    ],
   },
   "/scrollSpy/1_r": {
     key: "/scrollSpy/1_r",
@@ -150,6 +159,18 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     link: "/scrollSpy/2_r",
     name: "R - IO",
     children: ScrollSpy2,
+  },
+  "/scrollSpy/3_v": {
+    key: "/scrollSpy/3_v",
+    link: "/scrollSpy/3_v",
+    name: "JS",
+    children: ScrollSpy3V,
+  },
+  "/scrollSpy/4_r": {
+    key: "/scrollSpy/4_r",
+    link: "/scrollSpy/4_r",
+    name: "R - 스크롤 Box 응용",
+    children: ScrollSpy4,
   },
 };
 
