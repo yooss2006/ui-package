@@ -8,6 +8,7 @@ import LazyLoad1_V from "./components/lazyLoading/2_v";
 import InfiniteScrollR from "./components/infiniteScroll/react";
 import InfiniteScrollV from "./components/infiniteScroll/vanilla";
 import ScrollBox from "./components/scrollBox";
+import ScrollSpy1 from "@/components/scrollSpy/1_r";
 
 export const routePaths = [
   "/",
@@ -24,15 +25,7 @@ export const routePaths = [
   "/infiniteScroll/js",
   "/scrollBox",
   "/scrollSpy",
-  "/snackbar",
-  "/modal",
-  "/popover",
-  "/imageSlide",
-  "/carousel",
-  "/gallery",
-  "/selectBox",
-  "/autoComplete",
-  "/dnd",
+  "/scrollSpy/1_r",
 ] as const;
 export type ROUTE_PATH = (typeof routePaths)[number];
 
@@ -64,15 +57,7 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
       "/infiniteScroll",
       "/scrollBox",
       "/scrollSpy",
-      "/snackbar",
-      "/modal",
-      "/popover",
-      "/imageSlide",
-      "/carousel",
-      "/gallery",
-      "/selectBox",
-      "/autoComplete",
-      "/dnd",
+      "/scrollSpy/1_r",
     ],
   },
   "/accordion": {
@@ -149,63 +134,15 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
   },
   "/scrollSpy": {
     key: "/scrollSpy",
-    link: "/scrollSpy",
-    name: "09. 스크롤 스파이",
-    children: null,
+    link: "/scrollSpy/1_r",
+    name: "스크롤 스파이",
+    children: ["/scrollSpy/1_r"],
   },
-  "/snackbar": {
-    key: "/snackbar",
-    link: "/snackbar",
-    name: "10. 스낵바",
-    children: null,
-  },
-  "/modal": {
-    key: "/modal",
-    link: "/modal",
-    name: "11. 모달",
-    children: null,
-  },
-  "/popover": {
-    key: "/popover",
-    link: "/popover",
-    name: "12. 팝오버",
-    children: null,
-  },
-  "/imageSlide": {
-    key: "/imageSlide",
-    link: "/imageSlide",
-    name: "13. 이미지 슬라이드",
-    children: null,
-  },
-  "/carousel": {
-    key: "/carousel",
-    link: "/carousel",
-    name: "14. 캐러셀",
-    children: null,
-  },
-  "/gallery": {
-    key: "/gallery",
-    link: "/gallery",
-    name: "15. 갤러리",
-    children: null,
-  },
-  "/selectBox": {
-    key: "/selectBox",
-    link: "/selectBox",
-    name: "16. 셀렉트 박스",
-    children: null,
-  },
-  "/autoComplete": {
-    key: "/autoComplete",
-    link: "/autoComplete",
-    name: "17. 자동 완성",
-    children: null,
-  },
-  "/dnd": {
-    key: "/dnd",
-    link: "/dnd",
-    name: "18. D&D 리스트",
-    children: null,
+  "/scrollSpy/1_r": {
+    key: "/scrollSpy/1_r",
+    link: "/scrollSpy/1_r",
+    name: "R - scroll",
+    children: ScrollSpy1,
   },
 };
 
